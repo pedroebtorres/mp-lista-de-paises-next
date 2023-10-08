@@ -1,3 +1,14 @@
+export interface LanguageData {
+  [key: string]: string;
+}
+
+interface Translations {
+  [key: string]: {
+    official: string;
+    common: string;
+  };
+}
+
 export interface CountryData {
     name: {
       common: string;
@@ -31,16 +42,8 @@ export interface CountryData {
     altSpellings: string[];
     region: string;
     subregion: string;
-    languages: {
-      rus: string;
-    };
-    translations: {
-      ara: {
-        official: string;
-        common: string;
-      };
-      // Add more translations here as needed
-    };
+    languages: LanguageData;
+    translations: Translations;
     latlng: [number, number];
     landlocked: boolean;
     borders: string[];

@@ -11,14 +11,17 @@ import { CountryData } from "@/interfaces/CountryData";
 const CountriesList = (props: Props) => {
     const {countries, error, isLoading} = useCountries();
     return(
-        <div className="flex justify-center flex-row">
+        <div className="flex flex-wrap bg-gray-100">
             {isLoading && <p>Loading...</p>}
-            {error && <p>{error.message}</p>}
-            <div>
+            {error && <p>{error.message}</p>}            
             {countries && countries.map((country: CountryData, index: number) => {
-                return <div className='flex-wrap flex-row flex-grow' key={index}><CountryCard country={country} /></div>
-            })}
-            </div>
+                return <div 
+                className="bg-white rounded-xl p-3 m-3 flex w-60 h-56" 
+                key={index}
+                >
+                    <CountryCard country={country} />
+                </div>
+            })}            
         </div>
     )
 }
