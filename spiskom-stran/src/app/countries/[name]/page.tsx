@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client'
-import CountryDetails from "@/components/CountryDetails";
+import CountryDetails from "../CountryDetails";
 import { CountryData } from "@/interfaces/CountryData";
 import { fetchCountryByName } from "@/utils/fetchCountries";
 import React, {useEffect, useState} from "react";
@@ -26,7 +26,7 @@ export default function CountryPage(props: Props) {
     }, []);
 
     return (
-        <main className="h-screen w-screen text-black bg-gray-100 font-sans">
+        <main className="h-screen overflow-y-auto w-screen text-black bg-gray-100 font-sans">
         <Header />
             {country !== null ? (
                 <CountryDetails country={country} />

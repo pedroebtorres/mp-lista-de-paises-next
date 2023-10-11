@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import circle from "../images/circle.svg";
 import worldDraw from "../images/worldDraw.svg";
 
 const Header = () => {
     return (
         <header className="flex sticky top-0 bg-white h-20 items-center">
-            <div className="mx-20 flex items-center font-bold">
+            <div className="ml-72 flex items-center font-bold">
             <Image 
             priority 
             src={worldDraw} 
