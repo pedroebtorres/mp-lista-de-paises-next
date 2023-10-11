@@ -17,9 +17,7 @@ const imageStyle = {
     height: "275px",
 }
 const CountryDetails = (props: Props) => {
-    const languages = Object.keys(props.country.languages);
     console.log(props.country);
-    console.log(languages);
     return (
         <div className="flex-1 text-center mt-3">
             <h1 className=" text-5xl text-gray-800 font-bold">{props.country.name.common}</h1>

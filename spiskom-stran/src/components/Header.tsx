@@ -2,7 +2,10 @@ import React from "react";
 import Image from "next/image";
 import worldDraw from "../images/worldDraw.svg";
 
-const Header = () => {
+type Props = {
+}
+
+const Header = (props: Props) => {
     return (
         <header className="flex sticky top-0 bg-white h-20 items-center">
             <div className="ml-72 flex items-center font-bold">
