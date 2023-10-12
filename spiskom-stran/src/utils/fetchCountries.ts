@@ -10,7 +10,5 @@ export async function fetchCountryByName(name: string){
     const decodedName = decodeURI(name);
     const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
     const data = await res.json();
-    console.log(decodedName);
-    console.log(data.name);
     return data.find((country: CountryData) => country.name.common === (decodedName));
 }
